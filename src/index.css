@@ -1,0 +1,37 @@
+@import "tailwindcss";
+
+@theme {
+  --color-industrial-50: #f6f7f9;
+  --color-industrial-100: #edeef1;
+  --color-industrial-200: #d5d9df;
+  --color-industrial-300: #b0b7c3;
+  --color-industrial-400: #8690a2;
+  --color-industrial-500: #647085;
+  --color-industrial-600: #4e586b;
+  --color-industrial-700: #3f4757;
+  --color-industrial-800: #353c48;
+  --color-industrial-900: #2f343e;
+  --color-industrial-950: #1f2229;
+  
+  --color-construction-yellow: #facc15;
+  --color-construction-orange: #f97316;
+  
+  --font-sans: "Inter", system-ui, sans-serif;
+  --font-display: "Montserrat", system-ui, sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+@keyframes liquid {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.animate-liquid {
+  background-size: 200% auto;
+  animation: liquid 3s ease infinite;
+}
