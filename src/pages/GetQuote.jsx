@@ -43,7 +43,7 @@ const GetQuote = () => {
     };
 
     try {
-      const res = await fetch('http://localhost:5000/api/public/quote', {
+      const res = await fetch(`${import.meta.env.VITE_API_URL || 'https://srinath-stone-company-backend.onrender.com/api'}/public/quote`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(payload)

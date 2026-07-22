@@ -47,7 +47,7 @@ const Products = () => {
 
   async function fetchProducts() {
     try {
-      const res = await fetch('http://localhost:5000/api/public/products');
+      const res = await fetch(`${import.meta.env.VITE_API_URL || 'https://srinath-stone-company-backend.onrender.com/api'}/public/products`);
       const json = await res.json();
       if (json.data && json.data.length > 0) {
         // Map DB fields to component fields

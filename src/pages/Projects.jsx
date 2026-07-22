@@ -40,7 +40,7 @@ const Projects = () => {
 
   async function fetchProjects() {
     try {
-      const res = await fetch('http://localhost:5000/api/public/projects');
+      const res = await fetch(`${import.meta.env.VITE_API_URL || 'https://srinath-stone-company-backend.onrender.com/api'}/public/projects`);
       const json = await res.json();
       if (json.data && json.data.length > 0) {
         const mapped = json.data.map(p => ({
