@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { CheckCircle2, FileText, ArrowRight, Package } from 'lucide-react';
+import { ArrowRight, Package } from 'lucide-react';
 
 import heroBg from '../assets/crusher_plant.png';
 import stoneDust from '../assets/stone_dust.png';
@@ -45,7 +45,7 @@ const Products = () => {
     fetchProducts();
   }, []);
 
-  const fetchProducts = async () => {
+  async function fetchProducts() {
     try {
       const res = await fetch('http://localhost:5000/api/public/products');
       const json = await res.json();
@@ -66,7 +66,7 @@ const Products = () => {
     } finally {
       setLoading(false);
     }
-  };
+  }
   return (
     <main className="bg-industrial-50 min-h-screen">
       <Helmet>

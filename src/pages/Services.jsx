@@ -1,6 +1,5 @@
-import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Settings, Truck, Building2, HardHat, Cog, Map, ArrowRight } from 'lucide-react';
+import { Settings, Truck, Building2, Map, ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import heroBg from '../assets/crusher_plant.png';
 

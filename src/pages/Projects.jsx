@@ -1,10 +1,9 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Calendar, Building2, Image as ImageIcon } from 'lucide-react';
+import { Building2, Image as ImageIcon, Trophy } from 'lucide-react';
 
 import highwayProject from '../assets/highway_project.png';
 import metroProject from '../assets/metro_project.png';
-import crusherPlant from '../assets/crusher_plant.png';
 import heavyMachinery from '../assets/heavy_machinery.png';
 
 const fallbackProjectsList = [
@@ -39,7 +38,7 @@ const Projects = () => {
     fetchProjects();
   }, []);
 
-  const fetchProjects = async () => {
+  async function fetchProjects() {
     try {
       const res = await fetch('http://localhost:5000/api/public/projects');
       const json = await res.json();
@@ -61,7 +60,7 @@ const Projects = () => {
     } finally {
       setLoading(false);
     }
-  };
+  }
   return (
     <main className="bg-industrial-50 min-h-screen">
       <Helmet>
